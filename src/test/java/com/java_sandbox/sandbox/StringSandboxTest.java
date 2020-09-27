@@ -15,6 +15,13 @@ public class StringSandboxTest {
     }
 
     @Test
+    public void shouldReverseKeepSpace(){
+        assertEquals("srawedoc",StringSandbox.reverseKeepSpace("codewars"));
+        assertEquals("edoc ruoy",StringSandbox.reverseKeepSpace("your code"));
+        assertEquals("skco redo cruoy",StringSandbox.reverseKeepSpace("your code rocks"));
+    }
+
+    @Test
     void shouldCountLettersInString() {
         var initialString = "hello";
         var expectedResult = "e1h1l2";
